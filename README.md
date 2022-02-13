@@ -10,7 +10,7 @@ Não deve ser possivel cadastrar um carro com uma placa já existente.
 O carro deve ser cadastrado por padrão como disponível.
 O usuário responsável pelo cadastro deve ser um administrador.
 
-# Atualizar cadrastro de carro
+# Atualizar cadastro de carro
 
 **Requisitos Funcionais** -->
 Deve se possivel o cadastro de um carro.
