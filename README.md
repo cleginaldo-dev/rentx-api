@@ -1,4 +1,4 @@
-# Cadrastro de carro
+# Cadastro de carro
 
 **Requisitos Funcionais** -->
 Deve se possivel cadastrar um novo carro.
