@@ -1,4 +1,4 @@
-import { container, delay } from "tsyringe";
+import { container } from "tsyringe";
 
 import "@shared/container/providers";
 import { CarsImagesRepository } from "@modules/cars/infra/typeorm/repositories/CarsImagesRepository";
@@ -12,34 +12,38 @@ import { ISpecificationsRepository } from "@modules/cars/repositories/ISpecifica
 import { RentalsRepository } from "@modules/rentals/infra/typeorm/repositories/RentalsRepository";
 import { IRentalsRepository } from "@modules/rentals/repositories/IRentalsRepository";
 import { UsersRepository } from "@modules/users/infra/repositories/UsersRepository";
+import { UsersTokensRepository } from "@modules/users/infra/repositories/UsersTokensRepository";
+import { IUsersTokensRepository } from "@modules/users/repositories/ICreateUsersTokensRepository";
 import { IUsersRepository } from "@modules/users/repositories/IUsersRepository";
 
 container.registerSingleton<IUsersRepository>(
   "UsersRepository",
-  delay(() => UsersRepository)
+  UsersRepository
 );
 
 container.registerSingleton<ICategoriesRepository>(
   "CategoriesRepository",
-  delay(() => CategoriesRepository)
+  CategoriesRepository
 );
 
 container.registerSingleton<ISpecificationsRepository>(
   "SpecificationsRepository",
-  delay(() => SpecificationsRepository)
+  SpecificationsRepository
 );
 
-container.registerSingleton<ICarsRepository>(
-  "CarsRepository",
-  delay(() => CarsRepository)
-);
+container.registerSingleton<ICarsRepository>("CarsRepository", CarsRepository);
 
 container.registerSingleton<ICarsImagesRepository>(
   "CarsImagesRepository",
-  delay(() => CarsImagesRepository)
+  CarsImagesRepository
 );
 
 container.registerSingleton<IRentalsRepository>(
   "RentalsRepository",
-  delay(() => RentalsRepository)
+  RentalsRepository
+);
+
+container.registerSingleton<IUsersTokensRepository>(
+  "UsersTokensRepository",
+  UsersTokensRepository
 );
