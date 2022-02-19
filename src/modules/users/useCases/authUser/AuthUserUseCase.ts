@@ -5,8 +5,8 @@ import { inject, injectable } from "tsyringe";
 
 import auth from "@config/auth";
 import { User } from "@modules/users/infra/typeorm/entities/User";
-import { IUsersTokensRepository } from "@modules/users/repositories/ICreateUsersTokensRepository";
 import { IUsersRepository } from "@modules/users/repositories/IUsersRepository";
+import { IUsersTokensRepository } from "@modules/users/repositories/IUsersTokensRepository";
 import { IDateProvider } from "@shared/container/providers/dateProvider/IDateProvider";
 import { AppError } from "@shared/errors/AppError";
 
