@@ -13,8 +13,8 @@ import { RentalsRepository } from "@modules/rentals/infra/typeorm/repositories/R
 import { IRentalsRepository } from "@modules/rentals/repositories/IRentalsRepository";
 import { UsersRepository } from "@modules/users/infra/repositories/UsersRepository";
 import { UsersTokensRepository } from "@modules/users/infra/repositories/UsersTokensRepository";
-import { IUsersTokensRepository } from "@modules/users/repositories/ICreateUsersTokensRepository";
 import { IUsersRepository } from "@modules/users/repositories/IUsersRepository";
+import { IUsersTokensRepository } from "@modules/users/repositories/IUsersTokensRepository";
 
 container.registerSingleton<IUsersRepository>(
   "UsersRepository",

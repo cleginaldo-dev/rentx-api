@@ -18,6 +18,7 @@ export class CreateRentals1644172376719 implements MigrationInterface {
           {
             name: "user_id",
             type: "uuid",
+            isNullable: true,
           },
           {
             name: "start_date",

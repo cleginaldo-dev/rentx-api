@@ -9,7 +9,6 @@ export class AlterUserAddUserNameAndDriverlicense1641691391508
       new TableColumn({
         name: "username",
         type: "varchar",
-        isUnique: true,
         isNullable: true,
       })
     );

@@ -20,6 +20,7 @@ export class createUsersRefreshToken1645099892103
           {
             name: "user_id",
             type: "uuid",
+            isNullable: true,
           },
           {
             name: "expires_date",

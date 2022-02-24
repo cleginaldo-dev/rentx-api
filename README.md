@@ -93,6 +93,16 @@
 
 **Regras de Negocio** </br>
 * O usuário deve estar logado na aplicação.</br>
+# Recuperar senha de usuário
+
+**Requisitos Funcionais** </br>
+* Deve ser possível o usuário recuperar a senha informando o email.</br>
+* O usuário deve receber um email com o passo a passo para a recuperação da senha.</br>
+* O usuário deve conseguir inserir uma nova senha.</br>
+
+**Regras de Negocio** </br>
+* O usuário precisa informar uma nova senha.</br>
+* O link enviado para a recuperação deve expirar em 3 horas.</br>
 
 
 
