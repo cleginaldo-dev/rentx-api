@@ -13,21 +13,21 @@
 # Atualizar cadastro de carro
 
 **Requisitos Funcionais** </br>
-* Deve se possivel o cadastro de um carro.</br>
+* Deve se possível o cadastro de um carro.</br>
 
 **Requisitos não Funcionais** </br>
 
 **Regras de Negocio** </br>
-* Não deve ser possivel alterar um carro inexistente.</br>
-* Não deve ser possivel alterar a placa de um carro já cadastrado.</br>
+* Não deve ser possível alterar um carro inexistente.</br>
+* Não deve ser possível alterar a placa de um carro já cadastrado.</br>
 
 # Listagem de carros
 
 **Requisitos Funcionais** </br>
-* Deve ser possível listar todos os carros disponiveis.</br>
-* Deve ser possível listar todos os carros disponiveis pelo nome da categoria.</br>
-* Deve ser possível listar todos os carros disponiveis pelo nome da marca.</br>
-* Deve ser possível listar todos os carros disponiveis pelo nome do carro.</br>
+* Deve ser possível listar todos os carros disponíveis.</br>
+* Deve ser possível listar todos os carros disponíveis pelo nome da categoria.</br>
+* Deve ser possível listar todos os carros disponíveis pelo nome da marca.</br>
+* Deve ser possível listar todos os carros disponíveis pelo nome do carro.</br>
 
 **Requisitos não Funcionais** </br>
 * O usuário não precisa estar logado no sistema.</br>
@@ -42,8 +42,8 @@
 **Requisitos não Funcionais** </br>
 
 **Regras de Negocio** </br>
-* Não deve ser possível cadastratar uma especificação para um carro não cadastrado.</br>
-* Não deve ser possível cadastratar uma especificação já existente para o mesmo carro.</br>
+* Não deve ser possível cadastrar uma especificação para um carro não cadastrado.</br>
+* Não deve ser possível cadastrar uma especificação já existente para o mesmo carro.</br>
 * O usuário responsável pelo cadastro deve ser um administrador.</br>
 
 # Cadastro de imagens do carro
@@ -70,7 +70,7 @@
 * Não deve ser possível cadastrar um novo aluguel caso já exista um aberto para o mesmo usuário.</br>
 * Não deve ser possível cadastrar um novo aluguel caso já exista um aberto para o mesmo carro.</br>
 * O usuário deve estar logado na aplicação.</br>
-* Ao realizar um aluguel, o status do carro deverá ser alterado para indisponivel.</br>
+* Ao realizar um aluguel, o status do carro deverá ser alterado para indisponível.</br>
 # Devolução de carro
 
 **Requisitos Funcionais** </br>
@@ -82,7 +82,7 @@
 * Se o carro for devolvido com menos de 24 horas, deverá ser cobrado uma diaria completa.</br>
 * Ao realizar a devolução, o carro deverá ser liberado para outro aluguel.</br>
 * Ao realizar a devolução, o usuario deverá ser liberado para outro aluguel.</br>
-* Ao realizar a devolução, deverá ser calculado o totatl do aluguel.</br>
+* Ao realizar a devolução, deverá ser calculado o total do aluguel.</br>
 * Caso o horaŕio de devolução sejá superior ao horário previsto de entrega deverá ser cobrado multa proporcional aos dias de atrazo.</br>
 * Caso haja multa deverá ser somado ao total do aluguel.</br>
 * O usuário deve estar logado na aplicação.</br>
