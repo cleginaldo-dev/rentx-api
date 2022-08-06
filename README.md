@@ -1,12 +1,12 @@
 # Cadastro de carro
 
 **Requisitos Funcionais** </br>
-* Deve se possivel cadastrar um novo carro.</br>
+* Deve se possível cadastrar um novo carro.</br>
 
 **Requisitos não Funcionais** </br>
 
 **Regras de Negocio** </br>
-* Não deve ser possivel cadastrar um carro com uma placa já existente.</br>
+* Não deve ser possível cadastrar um carro com uma placa já existente.</br>
 * O carro deve ser cadastrado por padrão como disponível.</br>
 * O usuário responsável pelo cadastro deve ser um administrador.</br>
 
@@ -79,11 +79,11 @@
 **Requisitos não Funcionais** </br>
 
 **Regras de Negocio** </br>
-* Se o carro for devolvido com menos de 24 horas, deverá ser cobrado uma diaria completa.</br>
+* Se o carro for devolvido com menos de 24 horas, deverá ser cobrado uma diária completa.</br>
 * Ao realizar a devolução, o carro deverá ser liberado para outro aluguel.</br>
 * Ao realizar a devolução, o usuario deverá ser liberado para outro aluguel.</br>
 * Ao realizar a devolução, deverá ser calculado o total do aluguel.</br>
-* Caso o horaŕio de devolução sejá superior ao horário previsto de entrega deverá ser cobrado multa proporcional aos dias de atrazo.</br>
+* Caso o horário de devolução seja superior ao horário previsto de entrega deverá ser cobrado multa proporcional aos dias de atraso.</br>
 * Caso haja multa deverá ser somado ao total do aluguel.</br>
 * O usuário deve estar logado na aplicação.</br>
 # Listagem de alugueis para usuário
