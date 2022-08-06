@@ -22,7 +22,7 @@ export function ensureAuthenticated(
   try {
     // Verificar se o token é válido
     const [, token] = authToken.split(" ");
-    // Recuperar informaçẽs de usuário
+    // Recuperar informações de usuário
     const { sub: user_id } = verify(token, auth.secret_token) as IPayload;
 
     request.logged_user_id = user_id;
