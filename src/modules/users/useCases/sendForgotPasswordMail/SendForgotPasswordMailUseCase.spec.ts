@@ -26,20 +26,20 @@ describe("Send Forgot Mail", () => {
     );
   });
 
-  // it("Should be able to send a forgot password mail to user", async () => {
-  //   const sendMail = spyOn(mailProvider, "sendMail");
+  it("Should be able to send a forgot password mail to user", async () => {
+    const sendMail = jest.spyOn(mailProvider, "sendMail");
 
-  //   await usersRepositoryInMemory.create({
-  //     driver_license: "679644",
-  //     email: "rockbaoboa@gmail.com",
-  //     name: "Jenilson Santos",
-  //     password: "1234",
-  //   });
+    await usersRepositoryInMemory.create({
+      driver_license: "679644",
+      email: "rockbaoboa@gmail.com",
+      name: "Jenilson Santos",
+      password: "1234",
+    });
 
-  //   await sendForgotPasswordMailUseCase.execute("rockbaoboa@gmail.com");
+    await sendForgotPasswordMailUseCase.execute("rockbaoboa@gmail.com");
 
-  //   expect(sendMail).toBeCalled();
-  // });
+    expect(sendMail).toBeCalled();
+  });
 
   it("Should not be able to send an email if user does not exists", async () => {
     await expect(
@@ -47,18 +47,21 @@ describe("Send Forgot Mail", () => {
     ).rejects.toEqual(new AppError("User does not exists!"));
   });
 
-  // it("Should be able to create an users token", async () => {
-  //   const generateTokenMail = spyOn(usersTokensRepositoryInMemory, "create");
+  it("Should be able to create an users token", async () => {
+    const generateTokenMail = jest.spyOn(
+      usersTokensRepositoryInMemory,
+      "create"
+    );
 
-  //   await usersRepositoryInMemory.create({
-  //     driver_license: "673222",
-  //     email: "therock@gmail.com",
-  //     name: "Robes Santos",
-  //     password: "1234",
-  //   });
+    await usersRepositoryInMemory.create({
+      driver_license: "673222",
+      email: "therock@gmail.com",
+      name: "Robes Santos",
+      password: "1234",
+    });
 
-  //   await sendForgotPasswordMailUseCase.execute("therock@gmail.com");
+    await sendForgotPasswordMailUseCase.execute("therock@gmail.com");
 
-  //   expect(generateTokenMail).toBeCalled();
-  // });
+    expect(generateTokenMail).toBeCalled();
+  });
 });
