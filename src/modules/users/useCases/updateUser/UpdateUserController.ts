@@ -11,7 +11,10 @@ class UpdateUserController {
     const { name, username, email, password, driver_license, admin } =
       request.body;
 
-    const passwordHash = await hash(password, 8);
+    let passwordHash: string | undefined;
+    if (password) {
+      passwordHash = await hash(String(password), 8);
+    }
     const updateUserUseCase = container.resolve(UpdateUserUseCase);
     const userUpdate = await updateUserUseCase.execute({
       name,
@@ -23,6 +26,7 @@ class UpdateUserController {
       driver_license,
       admin,
     });
+
     return response.json(userUpdate);
   }
 }

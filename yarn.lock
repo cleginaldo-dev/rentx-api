@@ -777,7 +777,7 @@
   dependencies:
     "@types/express" "*"
 
-"@types/node@*":
+"@types/node@*", "@types/node@^18.11.17":
   version "18.11.17"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-18.11.17.tgz#5c009e1d9c38f4a2a9d45c0b0c493fe6cdb4bcb5"
   integrity sha512-HJSUJmni4BeDHhfzn6nF0sVmd1SMezP7/4F0Lq+aXzmp2xm9O7WXrUtHW/CHlYVtZUbByEvWidHqRtcJXGF2Ng==
@@ -1709,6 +1709,11 @@ domexception@^2.0.1:
   integrity sha512-yxJ2mFy/sibVQlu5qHjOkf9J3K6zgmCxgJ94u2EdvDOV09H+32LtRswEcUsmUWN72pVLOEnTSRaIVVzVQgS0dg==
   dependencies:
     webidl-conversions "^5.0.0"
+
+dotenv@^16.0.3:
+  version "16.0.3"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-16.0.3.tgz#115aec42bac5053db3c456db30cc243a5a836a07"
+  integrity sha512-7GO6HghkA5fYG9TYnNxi14/7K9f5occMlp3zXAuSxn7CKCxt9xbNWG7yF8hTCSUchlfWSe3uLmlPfigevRItzQ==
 
 dotenv@^8.2.0:
   version "8.6.0"
@@ -4528,7 +4533,7 @@ ts-jest@^27.1.3:
     semver "7.x"
     yargs-parser "20.x"
 
-ts-node-dev@^10.9.1:
+ts-node-dev@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ts-node-dev/-/ts-node-dev-2.0.0.tgz#bdd53e17ab3b5d822ef519928dc6b4a7e0f13065"
   integrity sha512-ywMrhCfH6M75yftYvrvNarLEY+SUXtUvU8/0Z6llrHQVBx12GiFk5sStF8UdfE/yfzk9IAq7O5EEbTQsxlBI8w==
