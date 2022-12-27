@@ -17,7 +17,7 @@ export function ensureAuthenticated(
   const authToken = request.headers.authorization;
   // Validar se token está preenchido
   if (!authToken) {
-    throw new AppError("Token faltando", 401);
+    throw new AppError("Token missing", 401);
   }
   try {
     // Verificar se o token é válido
@@ -28,6 +28,6 @@ export function ensureAuthenticated(
     request.logged_user_id = user_id;
     return next();
   } catch (error) {
-    throw new AppError("Token inválido", 401);
+    throw new AppError("Invalid token", 401);
   }
 }

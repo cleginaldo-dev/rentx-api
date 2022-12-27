@@ -7,7 +7,7 @@ import { AppError } from "@shared/errors/AppError";
 import { CreateUserUseCase } from "../createUser/CreateUserUseCase";
 import { AuthUserUseCase } from "./AuthUserUseCase";
 
-let autheUserUseCase: AuthUserUseCase;
+let authUserUseCase: AuthUserUseCase;
 let usersRepositoryTests: UsersRepositoryInMemory;
 let usersTokensRepositoryInMemory: UsersTokensRepositoryInMemory;
 let dateProvider: DayjsDateProvider;
@@ -18,7 +18,7 @@ describe("Authenticate User", () => {
     usersTokensRepositoryInMemory = new UsersTokensRepositoryInMemory();
     usersRepositoryTests = new UsersRepositoryInMemory();
     dateProvider = new DayjsDateProvider();
-    autheUserUseCase = new AuthUserUseCase(
+    authUserUseCase = new AuthUserUseCase(
       usersRepositoryTests,
       usersTokensRepositoryInMemory,
       dateProvider
@@ -34,9 +34,10 @@ describe("Authenticate User", () => {
       password: "123",
       driver_license: "123123123",
     };
+
     await createUserUseCase.execute(user);
 
-    const result = await autheUserUseCase.execute({
+    const result = await authUserUseCase.execute({
       email: user.email,
       password: user.password,
     });
@@ -45,7 +46,7 @@ describe("Authenticate User", () => {
 
   it("should not be able to authenticate with incorrect username", async () => {
     await expect(
-      autheUserUseCase.execute({
+      authUserUseCase.execute({
         username: "incorrectUseName",
         password: "1234",
       })
@@ -56,7 +57,7 @@ describe("Authenticate User", () => {
 
   it("should not be able to authenticate with incorrect email", async () => {
     await expect(
-      autheUserUseCase.execute({
+      authUserUseCase.execute({
         email: "incorrectEmail",
         password: "1234",
       })
@@ -75,7 +76,7 @@ describe("Authenticate User", () => {
     };
     await createUserUseCase.execute(user);
     await expect(
-      autheUserUseCase.execute({
+      authUserUseCase.execute({
         email: user.email,
         password: "incorrectPassword",
       })
