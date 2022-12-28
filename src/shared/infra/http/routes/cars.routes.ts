@@ -10,11 +10,11 @@ import { ensureAdmin } from "@shared/infra/http/middlewares/ensureAdmin";
 import { ensureAuthenticated } from "@shared/infra/http/middlewares/ensureAuthenticated";
 
 const carsRoutes = Router();
-const upload = multer(uploadConfig.upload("./tmp/cars"));
+const upload = multer(uploadConfig);
 const createCarController = new CreateCarController();
 const listAvailableCarsController = new ListAvailableCarsController();
 const createCarSpecificationController = new CreateCarSpecificationController();
-const UuploadCarImageController = new UploadCarImageController();
+const uploadCarImageController = new UploadCarImageController();
 
 carsRoutes.post(
   "/",
@@ -36,7 +36,7 @@ carsRoutes.post(
   ensureAuthenticated,
   ensureAdmin,
   upload.array("images"),
-  UuploadCarImageController.handle
+  uploadCarImageController.handle
 );
 
 export { carsRoutes };
