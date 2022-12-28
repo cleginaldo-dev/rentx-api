@@ -14,11 +14,11 @@ class UploadCarImageController {
 
     const uploadCarImageUseCase = container.resolve(UploadCarImageUseCase);
 
-    const image_name = images.map((file) => file.filename);
+    const images_name = images.map((file) => file.filename);
 
     await uploadCarImageUseCase.execute({
       car_id: id,
-      image_name,
+      images_name,
     });
     return response.status(201).send();
   }
