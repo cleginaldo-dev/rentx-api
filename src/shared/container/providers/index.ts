@@ -19,11 +19,11 @@ container.registerInstance<IMailProvider>(
 );
 
 const diskStorage = {
-  local: LocalStorageProvider,
+  disk: LocalStorageProvider,
   s3: S3StorageProvider,
 };
 
 container.registerSingleton<IStorageProvider>(
   "StorageProvider",
-  diskStorage[process.env.DISK]
+  diskStorage[process.env.STORAGE_DRIVER]
 );
