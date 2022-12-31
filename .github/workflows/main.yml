@@ -35,4 +35,3 @@ jobs:
             git pull
             yarn
             yarn build
-            yarn typeorm:prod migration:run
