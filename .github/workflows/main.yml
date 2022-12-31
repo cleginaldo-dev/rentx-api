@@ -29,9 +29,9 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}
           source: "., !node_modules"
-          target: "test"
           script: |
             cd ~/app/api-rentx
             git pull
             yarn
             yarn build
+          target: "test"
