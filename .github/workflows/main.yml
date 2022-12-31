@@ -10,17 +10,14 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    
-    strategy: 
-      matrix:
-        node-version: [16.x]
 
     steps:
       - uses: actions/checkout@v3
-      - name: Use Node.js ${{ matrix.node-version }}
+      
+      - name: Setup Nodejs
         uses: actions/setup-node@v3
         with:
-           node-version: ${{ matrix.node-version }}
+           node-version: 16.x
       - name: Install dependencies
         run: yarn
         
@@ -36,5 +33,3 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           source: "., !node_modules"
           target: "test"
-          
-          
