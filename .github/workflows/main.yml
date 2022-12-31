@@ -22,7 +22,7 @@ jobs:
         run: yarn
         
       - name: Build
-        run: yarn run build
+        run: yarn babel src --extensions \".js,.ts\" --out-dir dist --copy-files
         
       - name: copy file via ssh password
         uses: appleboy/scp-action@master
